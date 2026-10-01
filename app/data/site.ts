@@ -73,7 +73,7 @@ export const site = {
       "May this be the beginning of another beautiful chapter of us.",
       "Forever grateful for you. 🤍",
     ],
-    footer: "Made with love, for Leanne.",
+    footer: "Made with love, From Anesu.",
     // Optional: put your own name here if you want it shown in the footer, e.g. "— Anesu"
     signature: "",
   },
