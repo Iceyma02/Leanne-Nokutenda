@@ -17,7 +17,7 @@ export default function Encouragement() {
     setI((p) => (p === idx ? p : idx));
   });
   return (
-    <section ref={ref} className="relative bg-night" style={{ height: `${(encouragement.length + 1) * 70}vh` }} aria-label={site.encouragement.title}>
+    <section ref={ref} className="relative bg-night" style={{ height: `${(encouragement.length + 1) * 52}vh` }} aria-label={site.encouragement.title}>
       <div className="sticky top-0 flex h-[100svh] items-center justify-center overflow-hidden px-8 text-center">
         <FloatingParticles count={25} hearts={0.05} />
         <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 50%, rgba(90,22,48,.45), transparent 65%)" }} />

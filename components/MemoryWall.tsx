@@ -47,14 +47,14 @@ export default function MemoryWall() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-plum via-wine to-burgundy/60 px-5 py-32 md:px-12" aria-label={site.wall.title}>
+    <section className="relative overflow-hidden bg-gradient-to-b from-plum via-wine to-burgundy/60 px-5 py-24 md:px-12" aria-label={site.wall.title}>
       <Fade className="text-center">
         <h2 className="font-display display-lg">{site.wall.title}</h2>
         <p className="mt-3 font-hand text-xl text-champagne/80">{site.wall.hint}</p>
       </Fade>
 
       {/* desktop: scattered wall. mobile: gentle stagger. */}
-      <div className="relative mx-auto mt-20 max-w-6xl md:h-[820px]">
+      <div className="relative mx-auto mt-14 max-w-6xl md:h-[780px]">
         {memories.slice(0, 6).map((_, i) => {
           const s = spots[i];
           return (

@@ -45,7 +45,7 @@ export default function PhotoGallery() {
   useEffect(() => { lockScroll(open !== null); return () => lockScroll(false); }, [open]);
 
   return (
-    <section className="relative bg-gradient-to-b from-night to-plum px-4 py-32 md:px-12" aria-label="Photo gallery">
+    <section className="relative bg-gradient-to-b from-night to-plum px-4 py-24 md:px-12" aria-label="Photo gallery">
       <h2 className="text-center font-display display-lg">Frames I keep</h2>
       <div className="mt-8 flex justify-center gap-3" role="tablist">
         {(Object.keys(sets) as (keyof typeof sets)[]).map((k) => (
@@ -56,7 +56,7 @@ export default function PhotoGallery() {
         {photos.map((p, i) => (
           <motion.button key={`${tab}-${i}`} layoutId={`${tab}-${i}`} onClick={() => setOpen(i)} data-cursor="view" aria-label={`Open photo ${i + 1}`}
             className={`focus-ring group relative mb-3 block w-full overflow-hidden md:mb-5 ${ratios[i % ratios.length]}`}
-            initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} whileInView={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1.1, ease, delay: (i % 3) * 0.1 }}>
+            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 1.1, ease, delay: (i % 3) * 0.1 }}>
             <SafeImage src={p.src} alt={p.alt} sizes="(max-width: 768px) 50vw, 33vw" className="transition-transform duration-[1400ms] group-hover:scale-105" />
           </motion.button>
         ))}

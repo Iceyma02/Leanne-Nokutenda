@@ -69,14 +69,14 @@ function Experience() {
         <PhotoGallery />
         <MemoryWall />
         <VideoGallery />
-        <SectionTransition from="plum" to="ivory" h={220} />
+        <SectionTransition from="plum" to="ivory" h={120} />
         <LoveLetter />
-        <SectionTransition from="ivory" to="night" h={220} />
+        <SectionTransition from="ivory" to="night" h={120} />
         <Encouragement />
         <FutureTimeline />
-        <SectionTransition from="night" to="ivory" h={260} />
+        <SectionTransition from="night" to="ivory" h={140} />
         <Prayer />
-        <SectionTransition from="ivory" to="night" h={320} />
+        <SectionTransition from="ivory" to="night" h={160} />
         <FinalHeartExperience />
       </main>
       <MusicPlayer visible={opened} />
