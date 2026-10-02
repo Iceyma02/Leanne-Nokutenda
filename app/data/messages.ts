@@ -2,15 +2,15 @@
 
 // "Why My Queen Is Special" — floating words that open into a message.
 export const qualities = [
-  { word: "Your smile", message: "Some people light up a room. You change how the whole day feels.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER SMILE HERE]" },
-  { word: "Your heart", message: "You love with sincerity, and it shows in the smallest things.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER HEART HERE]" },
-  { word: "Your kindness", message: "Your kindness is quiet, steady and real. It never needs an audience.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER KINDNESS HERE]" },
-  { word: "Your strength", message: "You are stronger than you give yourself credit for. I see it.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER STRENGTH HERE]" },
-  { word: "Your ambition", message: "The way you reach for more inspires me to do the same.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER AMBITION HERE]" },
-  { word: "Your laughter", message: "Your laugh is one of my favourite sounds in the world.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER LAUGHTER HERE]" },
-  { word: "Your presence", message: "Being near you makes things feel calmer, warmer, more like home.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER PRESENCE HERE]" },
-  { word: "Your courage", message: "You keep going, even when it is hard. That takes real courage.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER COURAGE HERE]" },
-  { word: "Your dreams", message: "Your dreams matter to me, and I want to see every one of them happen.", note: "[ADD YOUR PERSONAL NOTE ABOUT HER DREAMS HERE]" },
+  { word: "Your smile", message: "Some people light up a room. You change how the whole day feels.", note: "Your smile is my favourite view, Queen. It makes my whole world a little softer." },
+  { word: "Your heart", message: "You love with sincerity, and it shows in the smallest things.", note: "You have the kind of heart people feel safe in. I'm so lucky to be loved by it." },
+  { word: "Your kindness", message: "Your kindness is quiet, steady and real. It never needs an audience.", note: "You are gentle in a way that makes everyone around you feel cared for. That's rare, and it's beautiful." },
+  { word: "Your strength", message: "You are stronger than you give yourself credit for. I see it.", note: "You carry so much with grace. You are strong, my Queen, and I'm always in awe of you." },
+  { word: "Your ambition", message: "The way you reach for more inspires me to do the same.", note: "The way you chase your dreams is stunning. Keep shining. I'll be cheering the loudest." },
+  { word: "Your laughter", message: "Your laugh is one of my favourite sounds in the world.", note: "Your laugh is my favourite sound, Babe. I'd do anything to hear it more." },
+  { word: "Your presence", message: "Being near you makes things feel calmer, warmer, more like home.", note: "Wherever you are feels like the best place to be. You turn ordinary moments into my favourites." },
+  { word: "Your courage", message: "You keep going, even when it is hard. That takes real courage.", note: "You keep going, even when it's hard, and that is so brave. I'm proud of you every single day." },
+  { word: "Your dreams", message: "Your dreams matter to me, and I want to see every one of them happen.", note: "Every dream you have deserves to come true, and I want to be right beside you when they do." },
 ];
 
 // The letter. Each block = a small handwritten label + a paragraph.
