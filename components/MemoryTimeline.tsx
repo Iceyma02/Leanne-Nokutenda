@@ -14,22 +14,23 @@ function Moment({ m, i, onVideo }: { m: Memory; i: number; onVideo: (src: string
   const y = useTransform(scrollYProgress, [0, 1], [reduce ? 0 : 70, reduce ? 0 : -70]);
   const rotate = useTransform(scrollYProgress, [0, 1], [reduce ? 0 : i % 2 ? 3 : -3, 0]);
   const right = i % 2 === 1;
+  const hasText = Boolean(m.title || m.description || m.date || m.quote);
   return (
-    <div ref={ref} className={`relative grid items-center gap-8 py-20 md:grid-cols-2 md:gap-20 md:py-32 ${right ? "md:[&>*:first-child]:order-2" : ""}`}>
+    <div ref={ref} className={`relative grid items-center gap-8 py-16 md:gap-20 md:py-28 ${hasText ? `md:grid-cols-2 ${right ? "md:[&>*:first-child]:order-2" : ""}` : right ? "md:pl-[30%]" : "md:pr-[30%]"}`}>
       <motion.div style={{ y, rotate }} className="relative mx-auto aspect-[4/5] w-full max-w-md" data-cursor="view">
-        <motion.div className="relative h-full w-full overflow-hidden shadow-[0_40px_80px_-30px_rgba(0,0,0,.8)]" initial={{ clipPath: "inset(100% 0 0 0)" }} whileInView={{ clipPath: "inset(0% 0 0 0)" }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1.6, ease }}>
-          <SafeImage src={m.image} alt={m.title} sizes="(max-width: 768px) 90vw, 40vw" />
+        <motion.div className="absolute inset-0 overflow-hidden shadow-[0_40px_80px_-30px_rgba(0,0,0,.8)]" initial={{ clipPath: "inset(100% 0 0 0)" }} whileInView={{ clipPath: "inset(0% 0 0 0)" }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1.6, ease }}>
+          <SafeImage src={m.image} alt={m.title || "A memory of us"} sizes="(max-width: 768px) 90vw, 40vw" />
         </motion.div>
         {m.video && (
           <button onClick={() => onVideo(m.video!)} aria-label="Watch video" className="focus-ring absolute bottom-4 right-4 flex h-14 w-14 items-center justify-center rounded-full border border-white/50 bg-night/50 backdrop-blur"><Play size={18} className="ml-0.5" /></button>
         )}
       </motion.div>
-      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 1.2, ease, delay: 0.2 }} className={right ? "md:text-right" : ""}>
-        <p className="font-hand text-2xl text-champagne"><Rich text={m.date} /></p>
-        <h3 className="mt-2 font-display display-md text-ivory"><Rich text={m.title} /></h3>
-        <p className="mt-5 max-w-md text-blush/80 md:inline-block"><Rich text={m.description} /></p>
+      {hasText && <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 1.2, ease, delay: 0.2 }} className={right ? "md:text-right" : ""}>
+        {m.date && <p className="font-hand text-2xl text-champagne"><Rich text={m.date} /></p>}
+        {m.title && <h3 className="mt-2 font-display display-md text-ivory"><Rich text={m.title} /></h3>}
+        {m.description && <p className="mt-5 max-w-md text-blush/80 md:inline-block"><Rich text={m.description} /></p>}
         {m.quote && <p className="mt-6 border-l border-heart/60 pl-4 font-display text-xl italic text-blush md:max-w-md"><Rich text={m.quote} /></p>}
-      </motion.div>
+      </motion.div>}
     </div>
   );
 }
@@ -67,7 +68,7 @@ export default function MemoryTimeline() {
         {memories.map((m, i) => <Moment key={m.id} m={m} i={i} onVideo={setVideo} />)}
       </div>
       <FilmStrip />
-      <AnimatePresence>{video && <VideoPlayerModal video={{ src: video, poster: "", title: "Memory", group: "us" }} onClose={() => setVideo(null)} />}</AnimatePresence>
+      <AnimatePresence>{video && <VideoPlayerModal video={{ src: video }} onClose={() => setVideo(null)} />}</AnimatePresence>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export type Photo = { src: string; caption: string; date?: string; alt: string }
 const make = (folder: string, prefix: string, n: number, alt: string): Photo[] =>
   Array.from({ length: n }, (_, i) => {
     const id = String(i + 1).padStart(2, "0");
-    return { src: `/media/images/${folder}/${prefix}-${id}.jpg`, caption: "[ADD YOUR PHOTO HERE]", alt: `${alt} ${i + 1}` };
+    return { src: `/media/images/${folder}/${prefix}-${id}.jpg`, caption: "", alt: `${alt} ${i + 1}` };
   });
 
 // Quick way: photos named leanne-01.jpg … leanne-08.jpg are picked up automatically.
@@ -19,7 +19,7 @@ export const usPhotos: Photo[] = make("us", "us", 8, "Photo of us");
 
 // The big full-bleed editorial photos in "Your Light" (use your best 3).
 export const lightPhotos: Photo[] = [
-  { src: "/media/images/leanne/leanne-01.jpg", caption: "[ADD YOUR PHOTO HERE]", alt: "Leanne" },
-  { src: "/media/images/leanne/leanne-02.jpg", caption: "[ADD YOUR PHOTO HERE]", alt: "Leanne" },
-  { src: "/media/images/leanne/leanne-03.jpg", caption: "[ADD YOUR PHOTO HERE]", alt: "Leanne" },
+  { src: "/media/images/leanne/leanne-01.jpg", caption: "", alt: "Leanne" },
+  { src: "/media/images/leanne/leanne-02.jpg", caption: "", alt: "Leanne" },
+  { src: "/media/images/leanne/leanne-03.jpg", caption: "", alt: "Leanne" },
 ];

@@ -22,9 +22,8 @@ Needs Node 18.17+ (Node 20+ recommended).
 | 📸 **Photos of her** | `public/media/images/leanne/` | `leanne-01.jpg` … `leanne-08.jpg` | JPG/WebP, long edge 2000px, under 600 KB |
 | 📸 **Photos of you two** | `public/media/images/us/` | `us-01.jpg` … `us-08.jpg` | same |
 | 🧷 **Timeline + memory wall photos** | `public/media/images/memories/` | `memory-01.jpg` … `memory-06.jpg` | same |
-| 🎬 **Videos of her** | `public/media/videos/leanne/` | `leanne-01.mp4`, `leanne-02.mp4` | MP4 (H.264), 720p/1080p, under 25 MB each |
+| 🎬 **Videos of her** (autoplay, muted, looping when she scrolls to them; no posters needed) | `public/media/videos/leanne/` | `leanne-01.mp4`, `leanne-02.mp4` | MP4 (H.264), 720p/1080p, under 25 MB each |
 | 🎬 **Videos of you two** | `public/media/videos/us/` | `us-01.mp4`, `us-02.mp4` | same |
-| 🖼️ **Video poster images** | `public/media/posters/` | same name as the video: `leanne-01.jpg`, `us-01.jpg` | JPG, 1280×720 |
 
 **The 3 best photos of her** go first in `leanne/` — `leanne-01`, `-02`, `-03` are the big full-screen editorial photos in the "Your Light" section.
 
@@ -43,7 +42,7 @@ Want more photos than 8? Change the number in `app/data/gallery.ts` (`make("lean
 | **The love letter**, "Why my Queen is special", encouragement, future list, **the prayer** | `app/data/messages.ts` |
 | **Memories** (timeline + memory wall): title, date, image, description, optional video, optional quote | `app/data/memories.ts` |
 | Photo gallery captions/dates | `app/data/gallery.ts` |
-| Video list/titles | `app/data/videos.ts` |
+| Video list (just the file paths) | `app/data/videos.ts` |
 | Colours | `tailwind.config.ts` (`colors`) |
 
 Everything in **[SQUARE BRACKETS]** is a placeholder for you to replace. While developing, it is highlighted in pink with a dashed underline so you can see what is left. **Search the project for `[` before you send it to her.**

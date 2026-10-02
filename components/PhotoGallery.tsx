@@ -25,7 +25,7 @@ function Lightbox({ photos, index, setIndex, tab, onClose }: { photos: Photo[]; 
         <SafeImage src={p.src} alt={p.alt} sizes="92vw" priority className="!object-contain" />
       </motion.div>
       <div className="mt-5 px-6 text-center" onClick={(e) => e.stopPropagation()}>
-        <p className="font-hand text-2xl text-blush"><Rich text={p.caption} /></p>
+        {p.caption && <p className="font-hand text-2xl text-blush"><Rich text={p.caption} /></p>}
         {p.date && <p className="text-xs tracking-soft text-champagne/70">{p.date}</p>}
         <p className="mt-1 text-xs text-blush/40">{index + 1} / {photos.length}</p>
       </div>

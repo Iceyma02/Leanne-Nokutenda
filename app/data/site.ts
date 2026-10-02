@@ -53,7 +53,11 @@ export const site = {
 
   wall: { title: "Little Moments, Big Memories.", hint: "Touch a photograph" },
 
-  letter: { title: "A Letter To My Queen", signoff: "Yours, always" },
+  letter: {
+    title: "A Letter To My Queen",
+    signoff: "Yours, always",
+    closing: "My Queen, my favourite person, and someone I'll always be grateful that life brought into my world.",
+  },
 
   encouragement: { title: "I Hope You Never Forget…" },
 

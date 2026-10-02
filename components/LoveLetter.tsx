@@ -28,6 +28,7 @@ export default function LoveLetter() {
         </div>
         <Fade className="mt-28 text-right">
           <p className="font-hand text-4xl text-burgundy">{site.letter.signoff},</p>
+          <p className="ml-auto mt-4 max-w-md font-display text-xl italic leading-relaxed text-wine">{site.letter.closing}</p>
           {site.finale.signature && <p className="mt-1 font-hand text-3xl text-rose">{site.finale.signature}</p>}
         </Fade>
       </div>

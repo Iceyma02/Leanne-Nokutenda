@@ -16,14 +16,14 @@ export const qualities = [
 // The letter. Each block = a small handwritten label + a paragraph.
 // Replace every [BRACKETED] part with your own words.
 export const letter = [
-  { label: "How deeply I love you", text: "Queen, there are feelings that are hard to hold in a sentence, and this is one of them. [WRITE YOUR PERSONAL MESSAGE HERE — how deeply you love her]" },
-  { label: "Gratitude", text: "I am grateful for you in ways I do not say often enough. [WRITE YOUR PERSONAL MESSAGE HERE — what you are thankful for]" },
-  { label: "What I admire", text: "There is so much about who you are that I admire. [WRITE YOUR PERSONAL MESSAGE HERE — the qualities you admire in her]" },
-  { label: "How proud I am", text: "I am proud of you, and not only for what you achieve, but for who you are while you do it. [WRITE YOUR PERSONAL MESSAGE HERE]" },
-  { label: "I believe in you", text: "I believe in you completely. [WRITE YOUR PERSONAL MESSAGE HERE — your belief in her and her dreams]" },
-  { label: "Being there", text: "I want you to know that on the hard days, I am here. Not to fix everything, but to stand with you. [WRITE YOUR PERSONAL MESSAGE HERE]" },
-  { label: "Our memories", text: "Every memory with you is precious to me. [WRITE YOUR PERSONAL MESSAGE HERE — a memory that matters to you]" },
-  { label: "Our future", text: "I am excited about what is ahead for us. [WRITE YOUR PERSONAL MESSAGE HERE — what you hope for together]" },
+  { label: "How deeply I love you", text: "You have become such a beautiful part of my heart, and loving you feels like one of the easiest and most beautiful things in my life." },
+  { label: "Gratitude", text: "Thank you for simply being you. For your love, your presence, your patience, and all the little moments that somehow mean so much to me." },
+  { label: "What I admire", text: "I admire your heart, your strength, your softness, and the way you keep being you even when life isn't always easy." },
+  { label: "How proud I am", text: "Watching you grow, dream, and become the woman you're meant to be makes me genuinely proud. I hope you always see in yourself what I see in you." },
+  { label: "I believe in you", text: "I believe in your dreams, even on the days when you might doubt yourself. You are capable of more than you realise, my Queen." },
+  { label: "Being there", text: "Whatever life brings, I want you to know you don't have to face everything alone. I'll be right there beside you, cheering you on." },
+  { label: "Our memories", text: "It's the little moments with you that stay with me the most — the laughs, the conversations, the silly moments, and simply being together." },
+  { label: "Our future", text: "I don't know exactly what tomorrow will look like, but I know I want more memories, more laughter, more adventures, and more of us." },
 ];
 
 export const encouragement = [

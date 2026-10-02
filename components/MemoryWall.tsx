@@ -40,8 +40,8 @@ export default function MemoryWall() {
     const m = memories[i];
     return (
       <>
-        <div className="relative aspect-square w-full overflow-hidden bg-night"><SafeImage src={m.image} alt={m.title} sizes="(max-width: 768px) 70vw, 24vw" /></div>
-        <p className="mt-2 truncate text-center font-hand text-xl text-night"><Rich text={m.title} /></p>
+        <div className="relative aspect-square w-full overflow-hidden bg-night"><SafeImage src={m.image} alt={m.title || "A memory of us"} sizes="(max-width: 768px) 70vw, 24vw" /></div>
+        {m.title && <p className="mt-2 truncate text-center font-hand text-xl text-night"><Rich text={m.title} /></p>}
       </>
     );
   };
@@ -78,9 +78,9 @@ export default function MemoryWall() {
           <motion.div className="fixed inset-0 z-[80] flex items-center justify-center bg-night/85 p-6 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setActive(null)} role="dialog" aria-modal="true" aria-label="Memory">
             <motion.div layoutId={`wall-${active}`} className="relative w-full max-w-md bg-ivory p-4 pb-6 shadow-2xl" style={{ rotate: 0 }} onClick={(e) => e.stopPropagation()}>
               <Sparkles />
-              <div className="relative aspect-square w-full overflow-hidden"><SafeImage src={memories[active].image} alt={memories[active].title} sizes="90vw" priority /></div>
-              <p className="mt-4 text-center font-hand text-2xl text-night"><Rich text={memories[active].title} /></p>
-              <p className="mt-1 text-center text-sm text-burgundy"><Rich text={memories[active].description} /></p>
+              <div className="relative aspect-square w-full overflow-hidden"><SafeImage src={memories[active].image} alt={memories[active].title || "A memory of us"} sizes="90vw" priority /></div>
+              {memories[active].title && <p className="mt-4 text-center font-hand text-2xl text-night"><Rich text={memories[active].title} /></p>}
+              {memories[active].description && <p className="mt-1 text-center text-sm text-burgundy"><Rich text={memories[active].description} /></p>}
               <button onClick={() => setActive(null)} className="focus-ring mx-auto mt-4 block min-h-11 px-4 text-xs tracking-soft text-burgundy">CLOSE</button>
             </motion.div>
           </motion.div>
